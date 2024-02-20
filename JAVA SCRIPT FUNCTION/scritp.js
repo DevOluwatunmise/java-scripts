@@ -138,3 +138,7 @@ return true;
 
 const prime = isPrime(3)
 console.log(prime)
+
+
+
+

@@ -44,3 +44,90 @@ const locaScope = () => {
 const Oloye = locaScope ()
 console.log(Oloye)
 
+// BLOCK SCOPE
+
+const religion = "christian"
+
+const exampleThree = () => {
+    const name = "chima"
+    if(true){
+        // block scope
+        const schoolName = "LASU"
+
+        console.log(`${name} is a ${religion} and goes to ${schoolName}`)
+    }
+}
+exampleThree()
+
+
+// HOISTING
+
+const result = exampleFive()
+console.log(result)
+
+function exampleFive(){
+    return 2 + 2
+}
+
+//CLOSURE
+//The scope regarding a function inside a function
+
+const outerFunction = () => {
+    const ben = 5 
+
+
+    const innerFunction = () => {
+        const man = 7
+
+        return ben + man
+    }
+
+   const final = innerFunction();
+   console.log(final * 2);
+
+}
+ outerFunction();
+
+const a = "6";
+const b = "3";
+ const firstBox = () => {
+    const water = a + b 
+ 
+    const innerBox = () => {
+        const sugar = a + b
+        return sugar * 4;
+    }
+    const all = innerBox();
+    console.log(all / 2);
+}
+ firstBox();
+    
+
+
+ 
+const firstFunc = () => {
+    const div = 2
+
+    const secondFunc = () => {
+        const condition = true
+        let certainNumber
+        const mult = 4
+
+        if(condition) {
+            certainNumber = 5
+        }
+
+        const ans = certainNumber * mult
+        return ans
+    }
+
+    const initialAnser = secondFunc()
+
+    const finalAnswer = initialAnser / div
+
+    console.log(finalAnswer)
+ }
+
+ firstFunc()
+
+
