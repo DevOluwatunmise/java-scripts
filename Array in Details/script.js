@@ -11,13 +11,17 @@ const cohorts = [
 ];
 console.log(cohorts);
 
+const replaceEl = (cohorts[1] = "Bash")
+cohorts [7] = "Tolu"
+
+// FOR LOOP ES5
 for(let i = 0; i < cohorts.length;  i++) {
     console.log(i, cohorts[i])
 
 }
-
-for(const cohort of cohorts) {
-    console.log(cohort);
+// FOR LOOP ES6
+for(const cohort04 of cohorts) {
+    console.log(cohort04);
 }
     
 
@@ -53,6 +57,27 @@ const arr = [
 ]
 
 console.log(arr)
+
+
+// PUSH METHOD 
+// it is used to add new element to the of an array
+
+const students =["Yemi", "Sola", "Grace", "Mariam", "Femi", "Bola" ]
+console.log(students);
+
+const pushed = students.push("Babe", "Rofiat", "Rahmat");
+console.log(pushed)
+
+
+//POP METHOD
+// It remove the last element
+
+const numbers = [3, 4, 5, 6, 7, 8, 9];
+console.log(numbers);
+
+const popped = numbers.pop();
+console.log(popped);
+console.log(numbers);
 
 
 
