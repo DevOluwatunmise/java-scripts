@@ -39,6 +39,7 @@ console.log(numerals)
 // Checking the lenght of a string
 //(position start the counting from 0 1 2 3 ...)
 //(length start the counting from 1 2 3 ...)
+// (-) start the counting from behind 
 
 
 const Name = "Hayzed"
@@ -84,6 +85,44 @@ console.log(starting)
 console.log(ending)
 
 
+// SLICE METHOD
+
+// GETTING A SUBSTRING
 
 
+// Slice method
+const exampleString = "hotdog"
+console.log(exampleString.slice(0, 4))
+console.log(exampleString.slice(4))
+console.log(exampleString.slice(-1))
 
+
+// Split method
+const sentence1 = "The quick brown fox jumped over the lazy dog"
+console.log(sentence1.split(' '));
+const name42 ="Nofisat and Zainab";
+const split11 = name42.split(' ')
+console.log(split11);
+
+
+//Reverse() and Join() method
+const name4 ="Nofisat and Zainab";
+const split1 = name4.split(' ')
+console.log(split1);
+
+const reverse$ = split1.reverse();
+console.log(reverse$);
+
+const join1 = reverse$.join('-')
+console.log(join1)
+
+
+// REPEAT MRTHOD
+const dogSays = "woof ";
+console.log(dogSays.repeat(2))
+
+
+// TRIM() METHOD
+
+const trim = " @example.com ";
+console.log(trim.trim());
