@@ -444,3 +444,36 @@ const studentName = StudentsAboveSix.map((student) => {
  studentName.forEach((student) => {
     console.log(`Hi ${student},  Congratulations You have been promoted to the next class`)
  }) 
+
+
+ //************************* ARRAY SOME AND EVERY *****************************//
+ ////// it also return bulian valu (true or False)
+
+ const box = [1, 2, 3, 4, 5, 6, 7]
+
+ // some check if some of the properties in an array meet a perticular condition
+ console.log(box.some((el) => {return el < 8}))
+
+ // every check if all of the properties in an array meet a perticular condition
+ console.log(box.every((el) => {return el > 4}))
+
+
+ //************************* ARRAY REDUCE *********************************//
+
+ //  loops through the array and return the sum of the array, it takes two 
+ // properties: a callback function and an initial value. The call function take two 
+ // parameters which are accumulator and value
+
+
+ const boxes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+ const answer = boxes.reduce((accumulator, value) => {
+    return accumulator + value
+ }, 0)
+
+// 0 + 1 = 1 => accumulator
+// 1 + 2 = 3=> accumulator
+// 3 + 3 = 16=> accumulator
+// 6 + 4 = 10 => accumulator
+
+ console.log(answer)
