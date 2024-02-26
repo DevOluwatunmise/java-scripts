@@ -388,7 +388,7 @@ console.log(aquaticAnimals)
 
 /********************* ARRAY FIND *************************/
 // find method returns the first number or digit or asigned value that match the 
-// request, and return it
+// request, and return it for example the first it encounter it will return it
 
 
 const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
@@ -442,5 +442,5 @@ const studentName = StudentsAboveSix.map((student) => {
  console.log(studentName);
 
  studentName.forEach((student) => {
-    console.log(`Hi ${student}, You have been promoted to the next class`)
+    console.log(`Hi ${student},  Congratulations You have been promoted to the next class`)
  }) 
