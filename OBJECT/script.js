@@ -209,4 +209,76 @@ person5.greet();
 
 
 ///******** VALUE AND REFRENCE ********///
+// 1 coping premitives value and   2 coping conplex values
+
+//*****coping premitives value
+////coping numbers 
+////coping string
+
+// COPING PRIMITIVE VALUE
+//java script will behave as its espected to behave, it just need to see what was 
+//the value of variable at the time of the assignment
+
+/// COPING NUMBER
+
+let x1 = 1
+let y1 = x1;
+
+x1 = 2
+console.log(x1)
+console.log(y1);
+
+
+
+/// COPING STRINGS
+
+let firstPerson = "Mark"
+let secondPerson = firstPerson
+
+firstPerson = "Austin";
+
+console.log(firstPerson)
+console.log(secondPerson)
+
+
+//******* COPING COMPLEX VALUE **********//
+
+// COPING ARRAYS
+
+const animals = ["Dogs", "Cats",];
+const otherAnimals = animals 
+
+animals.push("Goat");
+console.log(animals === otherAnimals)
+
+
+
+// COPING OBJECTS
+
+const data = {
+    firstName: "Oluwatunmise",
+    lastName: "Olorundare"
+}
+const otherdata = data
+
+console.log(otherdata)
+console.log(data === otherdata)
+
+
+
+///********* EQUALITY **********///
+
+const person1 = {
+    firstName: "Soliu"
+}
+const otherPerson1 = {
+    firstName: "Soliu"
+}
+console.log(person1 !== otherPerson1)
+
+const otherPerson3 = person1
+console.log(person1 === otherPerson3)
+
+
+
 
