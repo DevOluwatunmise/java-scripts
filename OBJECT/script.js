@@ -274,7 +274,7 @@ const person1 = {
 const otherPerson1 = {
     firstName: "Soliu"
 }
-console.log(person1 !== otherPerson1)
+console.log(person1 === otherPerson1)
 
 const otherPerson3 = person1
 console.log(person1 === otherPerson3)
