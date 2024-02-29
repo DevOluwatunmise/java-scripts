@@ -240,8 +240,100 @@ console.log(square.area);
 
 
 ///********** Different between const and class **************///
+// object with const cant be re asingn to any other object
+
+// const detailOne = {
+//     name: "Class Captain",
+//     age: 540,
+//     isBlack: false
+// }
+
+// const detailTwo = {
+//     name: "Baba Oloye",
+//     age: 640,
+//     isBlack: true
+// }
+
+// const getDetailOne = new detailOne()
+// console.log(getDetailOne)
 
 
+class Detail {
+    constructor(name, age, isPretty) {
+        this.name = name;
+        this.age = age;
+        this.isPretty = isPretty;
+    }
+}
+const detailOne = new Detail("Bash", 12, false);
+const detailTwo = new Detail("Nafi", 12, false);
+const detailThree = new Detail("Bode", 12, true);
+
+const all = [detailOne, detailTwo, detailThree]
+console.log(all)
+
+const array = [detailOne, detailTwo]
+array.push(detailThree)
+array.shift(detailOne)
+
+console.log(array)
+
+
+const createPerson = (name, age, isHands) => {
+    // const userSchema = {
+    //     name, age, isHands
+    // }
+    // return userSchema
+    return {name, age, isHands}
+}
+
+const personCreated = createPerson("Bode", 45, true)
+const personCreated2 = createPerson("Soliu", 450, true)
+
+console.log(personCreated)
+console.log(personCreated2)
+
+
+
+////***** INHERITANCE ******//
+
+
+//inheritance java scrip[t is ability of a class to derived properties 
+    //xtis and from another class while having its own property]
+
+    class Animal {
+        alive = true;
+
+         isBeautiful ='this animal is beautiful';
+
+        eat() {
+            console.log(`This ${this.name} can eat`);
+        }
+
+        sleep () {
+            console.log(`This ${this.name} can sleep`);
+        }
+    }
+    class Rabbit extends Animal {
+        name = 'Rabbit'
+
+        run() {
+            console.log(`This ${this.name} can run`)
+        } 
+    }
+
+    class Goat extends Animal {
+        name = 'goat'
+    }
+
+    const rabbit = new Rabbit()
+    rabbit.eat()
+    rabbit.run()
+
+    console.log(rabbit)
+
+    const goat = new Goat()
+    console.log(goat.isBeautiful)
 
 
 
