@@ -196,7 +196,7 @@ const School = class Academy {
 const headMaster = new School("Hayzed", "PEGAMUT");
 console.log(headMaster.principal)
 
-
+ //////class work
 // With an unanonomus class function named rectShape, create a
 // constructor with params of lenght and breath, get the area of a 
 // rectangle using getter function and calculate method, 
@@ -204,6 +204,7 @@ console.log(headMaster.principal)
 // answer to the console 
 
 
+/// answer
 const rectangleArea = class rectShape {
     constructor(length, breath) {
         this.length = length;
@@ -217,21 +218,30 @@ const rectangleArea = class rectShape {
     }
 }
 const calculate = new rectangleArea(10, 5);
-console.log(calculate.area)
+console.log(calculate.area);
+
+
+//////// correction
+
+const RectShap = class rectangle {
+    constructor(length, breath) {
+        this.length = length;
+        this.breath = breath
+    };
+    get area () {   // getter function
+        return this.calc() 
+    };
+    calc () {   //method
+        return this.length * this.breath 
+    }
+}
+const square = new RectShap(10, 10);
+console.log(square.area);
+
+
+///********** Different between const and class **************///
 
 
 
 
 
-
-
-
-// area = (base * height) / 2
-// function triangleArea(base, height) {
-// return 0.5 * base * height;
-// }
-// // Example usage
-// let baseLength = 10;
-// let heightLength = 5;
-// let area = triangleArea(baseLength, heightLength);
-// console.log(`The area of the triangle is: ${area}`);
