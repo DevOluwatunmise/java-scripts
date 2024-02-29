@@ -6,28 +6,30 @@
     <title>Document</title>
     <style>
         .menuItem {
-            background-color: brown;
+            background-color: violet;
             color: #fff;
         }
 
-        .menuItem.active {
-            background-color:blue ;
-            color: #000;
+       .menuItem.active {
+            background-color: blue;
+            color: black;
         }
 
-        
-        
-        
+        h2 {
+            font-size: 50px;
+            color: gold;
+        }
     </style>
 </head>
 <body>
-     <ul>
-        <l1 onclick="menuClick(this)" class="menuItem">Menu1</l1>
-        <l1 onclick="menuClick(this)" class="active">Menu2</l1>
-        <l1 onclick="menuClick(this)" class="menuItem">Menu3</l1>
-        <l1 onclick="menuClick(this)" class="menuItem">Menu4</l1>
-     </ul>
 
-     <script src="script.js"></script>
+    <h2></h2>
+    <ul>
+        <li onclick="menuClicked(this)" class="menuItem">Menu1</li>
+        <li onclick="menuClicked(this)" class="menuItem active">Menu2</li>
+        <li onclick="menuClicked(this)" class="menuItem">Menu3</li>
+        <li onclick="menuClicked(this)" class="menuItem">Menu4</li>
+    </ul>
+    <script src="script.js"></script>
 </body>
 </html>

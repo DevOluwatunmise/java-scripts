@@ -8,7 +8,7 @@ const menuClick = (curE1) => {
     for(let i = 0; i < anyThig.length; i++) {
         anyThig[i].classList.remove('active')
     }
-    curE1.classList.add('active')
+    event.targetclassList.add('active')
 }
 
 body.appendChild(heading);

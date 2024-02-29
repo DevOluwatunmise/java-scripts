@@ -2,6 +2,7 @@
 
 const tagE1 = document.getElementsByTagName('h1');
 console.log(tagE1);
+
 const testE1 = document.getElementsByClassName("testing");
 console.log(testE1)
 
@@ -24,3 +25,9 @@ console.log(submitBtn);
 submitBtn.addEventListener('click', () => {
     alert('its closing time already')
 })
+
+
+
+const age = 26;
+const beverage = age >= 21 ? "Beer" : "Juice";
+console.log(beverage);
