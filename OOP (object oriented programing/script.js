@@ -1,10 +1,13 @@
-let length = 10
-let width = 5
+// const length = 10;
+// const width = 5
 
-const calculateRectangleArea = function(length, width) {
-    return length * width;
-};
-console.log(calculateRectangleArea)
+// const RectangleArea = function(length, width) {
+//     return length * width;
+// };
+// console.log(RectangleArea)
+
+
+
 
 
 
@@ -23,12 +26,13 @@ console.log(calculateRectangleArea)
     },
 
     phoneNumber : {
-        moble : "12345",
+        mobile : "12345",
         landline : "6789"
     }
  }
  console.log(person.getFunction());
  console.log(person.phoneNumber.landline);
+ console.log(person.phoneNumber.mobile);
 
 //******** Object Constructor **********//
 
@@ -39,11 +43,13 @@ function PersonTwo(first_name, Last_name) {
 
 let person1 = new PersonTwo("Hayzed", "Mabululu");
 let person2 = new PersonTwo("Zainab", "Muritala");
+let person3 = new PersonTwo("John", "Olawale");
 // you will continue this process for as many name 
 // we want to add, and console it
 
 console.log(person1);
 console.log(person2);
+console.log(person3);
 
 
 
@@ -114,15 +120,34 @@ function Cohort(name, age, favFood, phoneNo, birthday) {
     console.log(this)
 }
 
-const One = new Cohort('Nofisat', 20, 'rice', 80334455, new Date("june 4, 2019"))
-const Two= new Cohort('Bode', 30, 'beans', 80334455, new Date("march 4, 2000"))
-const Three = new Cohort('Hayzed', 35, 'yam', 80553366, new Date("may 10, 2001"))
+const One = new Cohort(
+    'Nofisat', 
+    20, 
+    'rice', 
+    80334455, 
+    new Date("june 4, 2019")
+    )
+
+const Two= new Cohort(
+    'Bode', 
+    30, 
+    'beans', 
+    80334455, 
+    new Date("march 4, 2000")
+    )
+
+const Three = new Cohort(
+    'Hayzed', 
+    35, 
+    'yam', 
+    80553366, 
+    new Date("may 10, 2001"))
 
 
 //********** CLASS KEYWORD *********// 
 
-// A class i s a schemar for an opbject that can save many many many 
-// values, just as yoy can dfine function and function decleration, a class
+// A class is a schemar for an opbject that can save many many many 
+// values, just as yoy can define function and function decleration, a class
 // can be defined in two Way
 // 1. Class decleration.
 // 2. Class Expression
