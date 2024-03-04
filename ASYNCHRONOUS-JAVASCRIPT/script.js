@@ -95,5 +95,37 @@ const user3 = fetchUserTwo("Micheal", (user) => {
 
 // This is called callback hell. it becomes unreadable
 
+const user4 = fetchUserTwo("Micheal", (user) => {
+    fetchUserPhotos(user.username, (userPhotos) => {
+        fetchUserPhotosDetails(userPhotos[0], (details) => {
+            fetchUserPhotosDetails(userPhotos[0], (details) => {
+                fetchUserPhotosDetails(userPhotos[0],(details) => {
+                    fetchUserPhotosDetails(userPhotos[0], (details) => {
+                        console.log(details);
+                    })
+                })
+            })
+        })
+    })
+})
 
- 
+
+
+///*********** PROMISE ************///
+
+
+ ////   PROMISE are object that either return a sucesful fetct data or an error
+
+ // we'll use then and catch method in promise
+ //(both the positive and negative can not run together at the same time)
+
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log("Now we are inPromise");
+        resolve({username: "Bode"})
+        // reject("User not found")
+    }, 5000);
+})
+promise
+.then((user) => console.log(user.username))
+.catch((error) => console.log(error));
