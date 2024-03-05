@@ -246,13 +246,75 @@ const getAllUsersname = async () => {
 getAllUsersname()
 
 
-////************** TRY< CATCH< FINALLY ***********////
+////************** TRY => CATCH => FINALLY ***********////
 
 const getData = async () => {
   try {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await response.json();
+    return data
   
   } catch (error) {
     console.log("Error:", error.message)
   }
 }
+getData()
+
+.then((data) => console.log("data:", data)).catch((error) => console.log("Error:", error.message))
+
+
+
+// const fetchDataWithError = async () => {
+//   try {
+//     console.log('Fetching Data...')
+//     const res = await fetch('https://jsonplaceholder.typicode.com/invalid-url')
+//     if(!res.ok){
+//       throw new Error('Failed to fetch data ori e baje')
+//     }
+
+//     const $data  = await res .json();
+//     return $data
+
+//   } catch (error) {
+//     console.error('Error:', error.message)
+//   }
+// }
+
+// fetchDataWithError()
+// .then(result => {
+//   if(result) {
+//     console.log("Data", result)
+//   }
+// })
+
+
+const fetchSingleData = async () => {
+  try{
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+
+    if(!response.ok) {
+      throw new Error('Not found will fixed soon')
+    }
+    const [userData] = await response.json() // assuming data is an array of user
+    const {username, email, name} = userData;
+    return {username, email, name};
+
+  }catch (error) {
+    console.log('Error:', error.message)
+  }
+}
+fetchSingleData().then(({username, email, name}) => {
+  console.log('username:', username)
+  console.log('Email:', email)
+  console.log('Name :', name)
+})
+
+  
+const email = fetchJson.map((user) => {
+  return user.email
+})
+console.log(email)
+  
+  
+  
+  
